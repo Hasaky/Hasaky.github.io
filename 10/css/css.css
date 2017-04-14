@@ -1,5 +1,4 @@
 
-
 header{
 	width:1200px;
 	height:100px;
@@ -9,10 +8,10 @@ header{
 header h1{
 	text-align: center;
 	font-size: 72px;
-	color:pink;
+	color:blue;
 	margin:0;
 }
-nav {
+.t2 {
 	width:1200px;
 	margin:auto;
 	border: 1px solid #00DDFF;
@@ -22,15 +21,21 @@ nav {
 	content:"";
 	display:block;
 	clear: both;
-	font-size:0;
-	
+	font-size:0;	
 }
-nav ul li{
+ a{
+	width:100px;
+	height: 30px;
+	display: inline-block;
+	background-color: #ff0;
 	font-size:24px;
-	color: #00ddFF;
 	margin-right:100px;
-	float:left;
-	padding: 10px;;
+	padding: 10px;
+	text-decoration: none;
+}
+
+ a:hover{
+	background-color: #00f;
 }
 section{
 	width:1200px;
@@ -44,7 +49,7 @@ section main p{
 	font-size:16px;
 	border: 1px solid #00DDFF;
 }
-div{
+#t1{
 	margin:15px;
 	position:absolute;
 	top:0px;
