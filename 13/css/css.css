@@ -34,8 +34,12 @@
 	height:70px;
 	margin:auto;
 	background-color: rgba(0,0,0,.5);
+    transition:all .5s;
 	border-bottom: none;
 	z-index:3;
+}
+.imgList figure:hover figcaption{
+        background-color:rgba(0,0,0,0);
 }
 .imgList figure figcaption::before{
 	content: "";
