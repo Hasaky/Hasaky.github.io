@@ -1,0 +1,54 @@
+body{
+	background-color: deepskyblue;
+}
+.f{
+	background-color: #fff;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.8);
+	width:400px;
+	height:260px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin:auto;
+	text-align: center;
+}
+.f h3{
+	margin:10px 0;
+	text-align: center;
+}
+.f input:not([type="submit"]){
+	width:75%;
+	height:30px;
+	margin:10px 0;
+	border: 1px dashed lightblue;
+	outline: none;
+	text-indent: 1em;
+	transition:all .5s;
+}
+.f #s{
+	width:40%;
+	height: 40px;
+	position: absolute;
+	border: none;
+	bottom: -30px;
+	left:30%;
+	right:30%;
+	letter-spacing:0;
+	margin:10px 0;
+	background-color: rgba(50,50,100,.9);
+	color:#fff;
+	box-shadow: 0px 3px rgba(50,50,100,.5), 1px 1px 4px 0 rgba(0,0,0,.5);
+	cursor: pointer;
+	font-size: .8em;
+	transition:all .5s;
+}
+.f input:not([type="submit"]):hover{
+	border: 1px solid lightblue;
+	box-shadow: inset 0px 0px 6px 0px rgba(0,0,0,.5);
+}
+.f #s:hover{
+	letter-spacing: 5px;
+	background-color: #333;
+}
