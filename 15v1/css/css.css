@@ -1,0 +1,64 @@
+body{
+	max-width: 1200px;
+	margin:auto;
+	background: url(../img/pexels-photo-55787.jpg) fixed round;
+	background-size: contain;
+	
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear:both;
+}
+a{
+	color:#fff;
+	text-decoration: none;
+}
+header{
+	margin:50px 20px;
+	position:relative;
+}
+.logo img{
+	width:100px;
+	height:auto;
+}
+ul{
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+}
+ul li{
+	float:left;
+	margin:20px 50px;
+	cursor: pointer;
+}
+ul li a{
+	color:#fff;
+	padding: 20px;
+	border: 1px solid rgba(255,255,255,0);
+	transition: border .5s , color .5s;
+}
+ul li:hover a{
+	border: 1px solid rgba(255,255,255,1);
+	color:#000;
+}
+nav{
+	position:absolute;
+	top:-20px;
+	right:0px;
+}
+p{
+	line-height: 30px;
+	color:#fff;
+}
+h1{
+	line-height: 80px;
+	color:#fff;
+}
+p a{
+	padding: 3px;
+	border-bottom: 1px dashed #fff;
+}
+p a:hover{
+	border-bottom: 1px solid #fff;
+}
