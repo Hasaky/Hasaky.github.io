@@ -1,0 +1,117 @@
+body{
+	max-width: 1200px;
+	margin:auto;
+	background: url(../img/pexels-photo-55787.jpg) fixed round;
+	background-size: contain;
+	color:#fff;
+}
+.clearfix::after{
+	content: "";
+	display: table;
+	clear:both;
+}
+a{
+	color:#fff;
+	text-decoration: none;
+}
+header{
+	margin:50px 0;
+	position:relative;
+}
+.logo img{
+	width:100px;
+	height:auto;
+}
+ul{
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+}
+.head li{
+	float:left;
+	margin:40px 35px;
+	cursor: pointer;
+}
+.head li a{
+	font-family: "微软雅黑";
+	color:#fff;
+	padding: 20px;
+	border: 1px solid rgba(255,255,255,0);
+	transition: border .5s , color .5s;
+}
+.head li:hover a{
+	border: 1px solid rgba(255,255,255,1);
+	color:#000;
+}
+nav{
+	position:absolute;
+	top:-20px;
+	right:0px;
+}
+p{
+	line-height: 30px;
+	color:#fff;
+}
+h1{
+	line-height: 80px;
+	color:#fff;
+}
+p a{
+	padding: 3px;
+	border-bottom: 1px dashed #fff;
+}
+p a:hover{
+	border-bottom: 1px solid #fff;
+}
+main .fav li{
+	float:left;
+	width:160px;
+	height: 48px;
+	text-align: center;
+	line-height: 48px;
+	background-color: rgba(100,100,200,.5);
+	border-radius: 10px;
+	margin:10px 20px 0 0;
+	cursor: pointer;
+	transition: background-color .5s,border-radius .5s; 
+}
+main .fav li:hover{
+	background-color: rgba(200,100,200,.8);
+	border-radius: 0px;
+}
+.work figure{
+	float: left;
+	width:30%;
+	margin: 10px 40px 10px 0;
+	position: relative;
+	cursor: pointer;
+}
+.work figure img{
+	width:100%;
+	height: auto;
+	-webkit-filter: grayscale(.6);
+}
+.work figure figcaption{
+	width:100%;
+	height: 20px;
+	position: absolute;
+	text-align: center;
+	top:calc(50% - 10px);
+	opacity: 0;
+	transition: all .5s;
+	z-index: 1;
+}
+.work figure:hover figcaption{
+	opacity: 1;
+}
+.work figure:hover img{
+	-webkit-filter: grayscale(0);
+}
+aside a{
+	position: absolute;
+	bottom: 20px;
+	right:20px;
+	border: 1px solid #fff;
+	padding: 10px;
+	
+}
