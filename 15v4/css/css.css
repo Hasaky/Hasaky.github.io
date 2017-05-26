@@ -1,4 +1,4 @@
-.clearfix::after{
+﻿.clearfix::after{
 	content: "";
 	display: table;
 	clear:both;
@@ -13,7 +13,6 @@
 }
 body{
 	background: url(../img/pexels-photo-55787.jpg) fixed round;
-	background-size: contain;
 }
 a{
 	color:#fff;
