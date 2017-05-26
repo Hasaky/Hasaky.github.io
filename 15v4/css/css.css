@@ -1,14 +1,19 @@
-body{
-	max-width: 1200px;
-	margin:auto;
-	background: url(../img/pexels-photo-55787.jpg) fixed round;
-	background-size: contain;
-	color:#fff;
-}
 .clearfix::after{
 	content: "";
 	display: table;
 	clear:both;
+}
+.wrapper{
+	max-width: 1200px;
+	margin:auto;
+	color:#fff;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	background: url(../img/pexels-photo-55787.jpg) fixed round;
+	background-size: contain;
 }
 a{
 	color:#fff;
@@ -81,7 +86,7 @@ p a:hover{
 }
 .work figure{
 	float: left;
-	width:30%;
+	width:31%;
 	margin: 10px 40px 10px 0;
 	position: relative;
 	cursor: pointer;
@@ -129,7 +134,7 @@ p a:hover{
 	padding: 0 15px 0 15px;
 }
 .contact input{
-	width: 30%;
+	width: 31%;
 	height:30px;
 	border-radius: 5px;
 	border: none;
@@ -140,23 +145,24 @@ p a:hover{
 	margin-bottom: 20px;
 }
 .contact select{
-	width:31%;
+	width:32%;
 	text-indent: 15px;
-	height: 40px;
+	height: 30px;
 	margin-bottom: 20px;
 	border: none;
 	outline: none;
 }
 .contact textarea{
-	width:47%;
+	width:48%;
 	height: 40px;
-	margin-right:2%;
+	margin-right:3%;
 	padding: 10px 0 0 15px;
 }
 .contact input[type="submit"]{
-	width:47%;
+	width:48%;
+	margin-right: 0;
 	vertical-align: top;
-	height:50px;
+	height:40px;
 	background-color: #00BFFF;
 }
 aside a{
