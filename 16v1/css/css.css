@@ -3,7 +3,7 @@
 	display: table;
 	clear: both;
 }
-*{
+header, main .banner{
 	box-sizing: border-box;
 	font-family: "微软雅黑";
 	color:#fff;
@@ -15,12 +15,14 @@
 }
 header{
 	position: fixed;
-	width:1200px;
-	top:0;
-	bottom:0;
-	right:0;
-	left: 0;
-	margin:auto;
+	width:100%;
+	padding: 20px 0px;
+	background-color: rgba(0,0,0,.02);
+	transition: all .5s;
+}
+header.on{
+	padding: 3px 0;
+	background-color: rgba(0,0,0,.8);
 }
 a{
 	text-decoration: none;
@@ -28,11 +30,7 @@ a{
 ul{
 	list-style-type: none;
 }
-header.on{
-	padding: 3px 0;
-	background-color: rgba(0,0,0,.8);
-}
-.container .logo a span{
+.container .logo span{
 	font-family:'Dancing Script', cursive;
 	font-size: 3em;
 	position: relative;
@@ -41,12 +39,12 @@ header.on{
 } 
 .topMenu{
 	position: absolute;
-	right:0;
-	top:3%;
+	right:15%;
+	top:15%;
 }
 .topMenu li{
 	float:left;
-	margin:10px 20px;
+	margin:10px 30px;
 	
 }
 .topMenu li a{
@@ -86,4 +84,29 @@ header.on{
 	background-color: rgba(255,255,255,.7);
 	text-shadow: none;
 	padding: 2px 3px;
+}
+.about .container h2{
+	text-align: center;
+	margin-top:50px;
+	font-family: "微软雅黑";
+} 
+.about .container h2+p{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.about .container .img img{
+	width:48%;
+	float: left;
+}
+.about .container .note{
+	width:48%;
+	float: right;
+	line-height: 2;
+}
+.about .container .note p{
+	margin-top:0;
+}
+.about .container .note ol{
+	list-style-type: none;
+	padding: 0;
 }
