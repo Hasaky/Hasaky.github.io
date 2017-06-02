@@ -1,0 +1,125 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+header, main .banner{
+	box-sizing: border-box;
+	font-family: "微软雅黑";
+	color:#fff;
+}
+.container{
+	width:1200px;
+	margin:auto;
+	position: relative;
+}
+header{
+	position: fixed;
+	width:100%;
+	padding: 20px 0px;
+	top:0;
+	left:0;
+	height:100px;
+	background-color: rgba(0,0,0,.02);
+	transition: all .5s;
+}
+header.on{
+	height:65px;
+	padding: 3px 0;
+	background-color: rgba(0,0,0,.8);
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style-type: none;
+}
+.container .logo span{
+	font-family: Lobster;
+	font-size: 3em;
+	color: #fff;
+	vertical-align: top;
+}
+.container .logo a{
+	display: inline-block;
+} 
+.container .logo{
+	display: inline-block;
+}
+.topMenu{
+	position: absolute;
+	top:50%;
+	right:0;
+	margin-top:-38px;
+    display: inline-block;
+}
+.topMenu li{
+	float:left;
+	margin:10px 30px;
+}
+.topMenu li a{
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    color: #fff;
+}
+.topMenu li:first-child a{
+    color: #339BEB;
+}
+.banner{
+	background: url(../img/banner.jpg) no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 800px;
+}
+.banner .container{
+	width:800px;
+	height:210px;
+	position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+	}
+.banner .container h1{
+	text-align: center;
+}
+.banner .container h1 strong{
+	color: #339BEB;
+}
+.banner .container p{
+	line-height: 1.7em;
+}
+.banner .container p mark{
+	background-color: rgba(255,255,255,.7);
+	text-shadow: none;
+	padding: 2px 3px;
+}
+.about .container{
+	margin-bottom: 100px;
+}
+.about .container h2{
+	text-align: center;
+	margin-top:50px;
+	font-family: "微软雅黑";
+} 
+.about .container h2+p{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.about .container .img img{
+	width:48%;
+	float: left;
+}
+.about .container .note{
+	width:48%;
+	float: right;
+	line-height: 2;
+}
+.about .container .note p{
+	margin-top:0;
+}
+.about .container .note ol{
+	list-style-type: none;
+	padding: 0;
+}
