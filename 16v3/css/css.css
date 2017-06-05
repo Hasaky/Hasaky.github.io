@@ -9,7 +9,7 @@ header, main .banner{
 	color:#fff;
 }
 .container{
-	width:1200px;
+	max-width:1200px;
 	margin:auto;
 	position: relative;
 }
@@ -33,6 +33,9 @@ a{
 }
 ul{
 	list-style-type: none;
+}
+h1,h2{
+	font-family: "微软雅黑";
 }
 .container .logo span{
 	font-family: Lobster;
@@ -95,8 +98,8 @@ ul{
 	text-shadow: none;
 	padding: 2px 3px;
 }
-.about .container{
-	margin-bottom: 100px;
+.about{
+	margin-bottom: 50px;
 }
 .about .container h2{
 	text-align: center;
@@ -126,6 +129,7 @@ ul{
 .about .container li{
 	counter-reset: 1;
 	counter-increment: a;
+	font-family: "微软雅黑";
 }
 .about .container li::before{
 	content: counter(a);
@@ -138,10 +142,57 @@ ul{
 	border-radius: 30px;
 	margin-right:20px;
 	cursor: pointer;
-	position: relative;
-	left:0;
-	transition: left .5s;
+	/*position: relative;
+	left:0;*/
+	transition: transform .5s;
 }
 .about .container li:hover::before{
-	left:12px;
+	/*left:12px;*/
+	transform: translate(12px);
+}
+.service{
+	background: url(../img/desktop.jpg) no-repeat center center;
+	background-size: cover;
+	padding:50px 0;
+	position: relative;
+}
+.service::after{
+	content: "";
+	display: block;
+	position: absolute;
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+	box-shadow: inset 5px 5px 100px 20px rgba(0,0,0,.5);; 
+}
+.service .container h2,.service .container h2+p{
+	text-align: center;
+}
+.service li{
+	float: left;
+	text-align: right;
+	min-height: 130px;
+	width:48%;
+}
+.service li:nth-child(2n){
+	float: right;
+	text-align: left;
+}
+.service li h3{
+	margin:0;
+	display: inline-block;
+}
+li::after{
+content: "";
+display: table;
+clear: both;	
+}
+.service li i{
+	float: right;
+	padding: 2px 0 2px 20px;
+}
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 2px 20px 2px 0;
 }
