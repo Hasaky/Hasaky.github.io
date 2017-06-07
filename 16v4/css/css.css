@@ -1,0 +1,274 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+header, main .banner{
+	box-sizing: border-box;
+	font-family: "微软雅黑";
+	color:#fff;
+}
+.container{
+	max-width:1200px;
+	margin:auto;
+	position: relative;
+}
+header{
+	position: fixed;
+	width:100%;
+	padding: 20px 0px;
+	top:0;
+	left:0;
+	height:100px;
+	background-color: rgba(0,0,0,.02);
+	transition: all .5s;
+	z-index: 999;
+}
+header.on{
+	height:65px;
+	padding: 3px 0;
+	background-color: rgba(0,0,0,.8);
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style-type: none;
+}
+h1,h2{
+	font-family: "微软雅黑";
+}
+.container .logo span{
+	font-family: Lobster;
+	font-size: 3em;
+	color: #fff;
+	vertical-align: top;
+}
+.container .logo a{
+	display: inline-block;
+} 
+.container .logo{
+	display: inline-block;
+}
+.topMenu{
+	position: absolute;
+	top:50%;
+	right:0;
+	margin-top:-38px;
+    display: inline-block;
+}
+.topMenu li{
+	float:left;
+	margin:10px 30px;
+}
+.topMenu li a{
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+    color: #fff;
+}
+.topMenu li:first-child a{
+    color: #339BEB;
+}
+.banner{
+	background: url(../img/banner.jpg) no-repeat center;
+	background-size: cover;
+	width: 100%;
+	height: 800px;
+}
+.banner .container{
+	width:800px;
+	height:210px;
+	position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.8);
+	}
+.banner .container h1{
+	text-align: center;
+}
+.banner .container h1 strong{
+	color: #339BEB;
+}
+.banner .container p{
+	line-height: 1.7em;
+}
+.banner .container p mark{
+	background-color: rgba(255,255,255,.7);
+	text-shadow: none;
+	padding: 2px 3px;
+}
+.about{
+	margin-bottom: 50px;
+}
+.about .container h2{
+	text-align: center;
+	margin-top:50px;
+	font-family: "微软雅黑";
+} 
+.about .container h2+p{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.about .container .img img{
+	width:48%;
+	float: left;
+}
+.about .container .note{
+	width:48%;
+	float: right;
+	line-height: 2;
+}
+.about .container .note p{
+	margin-top:0;
+}
+.about .container .note ol{
+	list-style-type: none;
+	padding: 0;
+}
+.about .container li{
+	counter-reset: 1;
+	counter-increment: a;
+	font-family: "微软雅黑";
+}
+.about .container li::before{
+	content: counter(a);
+	border: 1px dashed #000;
+	display: inline-block;
+	width:24px;
+	height:24px;
+	text-align: center;
+	line-height: 24px;
+	border-radius: 30px;
+	margin-right:20px;
+	cursor: pointer;
+	/*position: relative;
+	left:0;*/
+	transition: transform .5s;
+}
+.about .container li:hover::before{
+	/*left:12px;*/
+	transform: translate(10px) rotate(360deg);
+}
+.service{
+	background: url(../img/desktop.jpg) no-repeat center center;
+	background-size: cover;
+	padding:40px 0;
+	position: relative;
+	box-shadow: inset 5px 5px 100px 20px rgba(0,0,0,.5); 
+}
+/*.service::after{
+	content: "";
+	display: block;
+	position: absolute;
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+	z-index: -1;
+	
+}*/
+.service .container h2,.service .container h2+p{
+	text-align: center;
+}
+.service .container h2+p{
+	
+	margin-bottom: 60px;
+}
+.service ul{
+	padding: 0;
+}
+.service li{
+	float: left;
+	text-align: right;
+	min-height: 130px;
+	width:48%;
+	margin-right: 4%;
+	line-height: 1.8;
+	cursor: pointer;
+}
+.service li:nth-child(2n){
+	float: right;
+	margin:0;
+	text-align: left;
+}
+.service li h3{
+	margin:0;
+	display: inline-block;
+}
+.service li i{
+	float: right;
+	padding: 10px 0 5px 20px;
+}
+.service li:hover i{
+	color: #339BEB;
+	transform: scale(1.2) rotate(6deg);
+}
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 10px 20px 5px 0;
+}
+.case h2{
+	text-align: center;
+	margin-top:50px;
+}
+.case p{
+	margin-bottom: 70px;
+	text-align: center;
+}
+.case figure{
+	margin: 8px calc(4%/3) 8px 0;
+	float: left;
+	width:24%;
+	overflow: hidden;
+	position: relative;
+}
+.case figure:nth-child(4n){
+	margin-right: 0;
+}
+.case figure img{
+	width:100%;
+	height: auto;
+	transition: transform .5s;
+}
+.case figure:hover img{
+	transform:scale(1.5) rotate(15deg);
+}
+.case figure figcaption{
+	position: absolute;
+	bottom:5%;
+	right:5%;
+	left: 5%;
+	background-color: rgba(255,255,255,.8);
+	z-index: 2;
+}
+.case .time{
+	background-color: #339BEB;
+	width:50px;
+	height:50px;
+	font-size: .8em;
+	text-align: center;
+	line-height: 2;
+	display: inline-block;
+	position: absolute;
+	top:10px;
+	left: 10px;
+}
+.case h3{
+	text-indent: 30%;
+	margin-top:24px;
+}
+.case figcaption p{
+	font-size: .8em;
+	margin:30px 10px;
+}
+.case .data{
+	text-align: right;
+	font-size: .8em;
+	padding:5px 2px;
+	background-color: rgba(0,0,0,.2);
+}
+.case .data i{
+	margin-right:5px;
+}
