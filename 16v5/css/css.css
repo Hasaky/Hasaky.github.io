@@ -238,10 +238,11 @@ h1,h2{
 .service li i{
 	float: right;
 	padding: 10px 0 5px 20px;
+	transition: transform .5s;
 }
 .service li:hover i{
 	color: #339BEB;
-	transform: scale(1.2) rotate(6deg);
+	transform: scale(1.5) rotate(15deg);
 }
 .service li:nth-child(2n) i{
 	float: left;
@@ -370,7 +371,8 @@ h1,h2{
 	cursor: pointer;
 } 
    ::-webkit-input-placeholder{ 
-    color: #000; 
+    color: #000;
+    ; 
 }
 footer p{
 	text-align: center;
