@@ -3,8 +3,10 @@
 	display: table;
 	clear: both;
 }
-header, main .banner{
+*{
 	box-sizing: border-box;
+}
+header, main .banner{
 	font-family: "微软雅黑";
 	color:#fff;
 }
@@ -246,7 +248,7 @@ h1,h2{
 	padding: 10px 20px 5px 0;
 }
 .case{
-	margin: 50px 0 30px 0;
+	margin: 50px 0;
 }
 .case h2{
 	text-align: center;
@@ -317,10 +319,22 @@ h1,h2{
 	margin-right:5px;
 }
 .contact{
-	background:url(../img/android-1869510_1920.jpg) no-repeat center center;
+	background: url(../img/android-1869510_1920.jpg) no-repeat center top;
 	background-size: cover;
 	padding:50px 0;	
 	color: #fff;
+}
+.contact .container .message{
+	display: inline-block;
+	width:48%;
+	margin-right: 1%;
+	/*position: relative;
+	bottom: 16px;*/
+}
+.contact .container .form{
+	display: inline-block;
+	width:48%;
+	margin-left: 1%;
 }
 .contact .container h2,.contact .container p{
 	text-align: center;
@@ -330,6 +344,7 @@ h1,h2{
 }
 .contact .container .message p{
 	margin-bottom: 16px;
+	margin-top: 0;
 	text-align: left;
 	line-height: 2em;
 }
@@ -337,15 +352,26 @@ h1,h2{
 	padding:0;
 }
 .contact .container .message ul li{
-	padding: 5px 0;
+	padding: 7px 0;
 }
-.contact .container .message,.contact .container .form{
-	display: inline-block;
-	width:48%;
-	margin-right: 1%;
+.contact .container .message ul li i{
+	padding-right: 10px;
 }
-.contact .container .form{
-	display: inline-block;
-	width:48%;
-	margin: 0 0 0 1%;
+.contact .container .form input,textarea{
+	width:100%;
+    margin:10px 0;
+    padding: 10px 16px;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+    background-color: rgba(255,255,255,.6);
+}
+.contact .container .form input[type="submit"]{
+	cursor: pointer;
+} 
+   ::-webkit-input-placeholder{ 
+    color: #000; 
+}
+footer p{
+	text-align: center;
 }
