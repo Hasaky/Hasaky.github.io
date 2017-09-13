@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#a{
+				font-size: 14px;
+				text-indent: 2em;
+				line-height: 1.5em;
+				max-width: 1000px;
+			}
+			#d,#x{
+				font-size: 18px;
+				font-family: "微软雅黑";
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<!--内嵌js，导入外部的js-->
+		<a id="d" href="javascript:">大</a>&nbsp;<a id="x" href="javascript:">小</a>
+		<div id="a">
+			<p>666666666666666666666666666666666666666666666666666666666666666666666666666666666</p>
+		</div>
+		<script type="text/javascript" charset="utf-8">
+			var a=document.getElementById('a');
+			var d=document.getElementById('d');
+			var x=document.getElementById('x');
+			var i=14;
+			//a.style.fontSize='18px';
+			d.onclick=function(){
+				i+=3;
+				a.style.fontSize=i+'px';
+			}
+			x.onclick=function(){
+				i-=3;
+				a.style.fontSize=i+'px';
+			}
+		</script>
+	</body>
+</html>
