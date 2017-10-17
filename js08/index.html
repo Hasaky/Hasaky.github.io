@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.a{
+				margin:auto;
+				width:600px;
+				height:200px;
+			}
+			.a input{
+				margin:5%;
+				height:50px;
+				width:50px;
+				background-color:rgba(0,255,255,.8);
+				float:left;
+			}
+		</style>
+	</head>
+	<body>
+<form action="" method="post" class="a">
+	<input type="button" name="" id="" value="no.1" />
+	<input type="button" name="" id="" value="no.2" />
+	<input type="button" name="" id="" value="no.3" />
+	<input type="button" name="" id="" value="no.4" />
+	<input type="button" name="" id="" value="no.5" />
+</form>
+		
+		<script type="text/javascript">
+			var btnlist=document.querySelectorAll('.a input');
+			for(var i=0;i<btnlist.length;i++)
+			{
+				(function(e){
+					btnlist[i].addEventListener('click',function(s){console.log('你单击了第'+e+'个按钮');});
+					
+				})(i+1);
+			}
+		</script>
+	</body>
+</html>
