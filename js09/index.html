@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#submit{
+				margin:10px 160px;
+				width: 80px;
+				background-color: rgba(0,255,255,.8);
+			}
+			#pass{
+				margin-left: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="aa">	
+			用户名 ：<input type="text" id="user"  /><br />
+			密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="text"  id="pass"  /><br />
+			<input type="submit" name="" id="submit" value="登录" />
+		</div>
+		<script type="text/javascript">
+			var ouser = document.getElementById("user");
+			var opass = document.getElementById("pass");
+			var osubmit = document.getElementById("submit");
+			
+			document.onkeydown=function(event){
+		        var event=event||window.event;
+		        document.getElementById("username").innerHTML=event.keyCode;  
+		        document.getElementById("password").innerHTML=event.keyCode; 
+      }
+			osubmit.addEventListener("click",function () {
+				if(ouser.value!=""&&opass.value!=""){
+					alert("登录成功");
+				}
+				else
+				alert("请输入用户名及密码!");
+		});
+		</script>
+	</body>
+</html>
