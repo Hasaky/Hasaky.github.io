@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			input{
+				margin: 5px 10px;
+			}
+		</style>
+	</head>
+	<body>
+	<form action="" method="post">
+		<input type="text" name="username" id="username" value="" /><br />
+		<input type="text" name="password" id="password" value="" /><br />
+		<input type="submit" name="login" id="login" value="登录" />
+	</form>
+	<script type="text/javascript">
+		var ousername = document.querySelector('#username');
+		var opassword = document.querySelector('#password');
+		var ologin = document.querySelector('#login');
+	    ologin.onclick = function(){
+		localStorage.setItem("username",ousername.value);
+		localStorage.setItem("password",opassword.value);  
+	}
+
+	</script>
+	</body>
+</html>

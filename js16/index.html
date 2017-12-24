@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.menuContainer{
+				border: 2px dotted #c0c;
+			    width: 95%;
+			    padding: 3px 3px 3px 3px;
+			}
+			.menu{
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
+			}
+			.menu li{
+				list-style-type: none;
+				font-size: 20px;
+				font-family: "微软雅黑";
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="menuContainer">
+			<ul class="menu">
+				<li>111111111111111111111111111111</li>
+				<li>222222222222222222222222222222</li>
+				<li>333333333333333333333333333333</li>
+				<li>444444444444444444444444444444</li>
+				<li>555555555555555555555555555555</li>
+				<li>666666666666666666666666666666</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var oMenu=document.querySelector('.menu'),
+			    oMenuItem=document.querySelectorAll('.menu li');
+			
+			var itemHeight=oMenuItem[0].offsetHeight,
+			    n=3,
+			    totalHeight=itemHeight*n,
+			    runFlag=true;
+			
+//			for (var i = 0; i < oMenuItem.length; i++) {
+//				oMenuItem[i].innerHTML=(i+1)+". "+oMenuItem[i].innerHTML;
+//			}
+//				
+			oMenu.style.height=totalHeight+"px";
+			oMenu.innerHTML+=oMenu.innerHTML;
+			oMenu.addEventListener("mouseover",function(){runFlag=false});
+			oMenu.addEventListener("mouseout",function(){runFlag=true});
+			
+			function run() {
+				var stop=oMenu.scrollTop%totalHeight==0&&!runFlag;
+				if(!stop){
+					oMenu.scrollTop==oMenu.scrollHeight/2?oMenu.scrollTop=0:oMenu.scrollTop++;
+				}
+				setTimeout(run,oMenu.scrollTop%totalHeight==0?1000:10);
+			};
+			setTimeout(run,1000);
+		</script>
+	</body>
+</html>
