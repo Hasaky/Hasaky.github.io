@@ -10,7 +10,7 @@
 				clear: both;
 				display: block;
 			}
-			.tabs .tabItems .item {
+			.tab .tabItem .item {
 				padding: 10px 30px;
 				float: left;
 				border-radius: 5px 5px 0px 0px;
@@ -18,22 +18,22 @@
 				cursor: pointer;
 			}
 			
-			.tabContents .content {
+			.tabContent .content {
 				width: 600px;
 				min-height: 300px;
 				text-indent: .5em;
 				border-radius:0 20px 20px 20px;
 			}
 			
-			.tabs div div:nth-child(1) {
+			.tab div div:nth-child(1) {
 				background-color: #0dd;
 			}
 			
-			.tabs div div:nth-child(2) {
+			.tab div div:nth-child(2) {
 				background-color: #d0d;
 			}
 			
-			.tabs div div:nth-child(3) {
+			.tab div div:nth-child(3) {
 				background-color: #dd0;
 			}
 		</style>
@@ -41,12 +41,12 @@
 	</head>
 
 	<body>
-		<div id="app" class="tabs">
-			<div class="tabItems clearfix">
-				<div class="item" v-for="(item,index) in tabsItems" @click="toggleTabs(index)">{{item}}</div>
+		<div id="app" class="tab">
+			<div class="tabItem clearfix">
+				<div class="item" v-for="(item,index) in tabsItem" @click="toggleTab(index)">{{item}}</div>
 			</div>
-			<div class="tabContents">
-				<div id="news" v-for="(item,index) in tabsContents" class="content" v-show="nowIndex===index">{{item}}</div>
+			<div class="tabContent">
+				<div id="news" v-for="(item,index) in tabsContent" class="content" v-show="nowIndex===index">{{item}}</div>
 			</div>
 		</div>
 	</body>
@@ -56,12 +56,12 @@
 	var app = new Vue({
 		el: '#app',
 		data: {
-			tabsItems: ['新闻', '通知','公告'], 
-			tabsContents:['新闻内容。。。','通知内容。。。','公告内容。。。'],
+			tabsItem: ['新闻', '通知','公告'], 
+			tabsContent:['新闻内容。。。','通知内容。。。','公告内容。。。'],
 			nowIndex: 0 
 		},
 		methods: {
-			toggleTabs: function(index) {
+			toggleTab: function(index) {
 				this.nowIndex = index;
 			}
 		}
